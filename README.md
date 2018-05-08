@@ -21,4 +21,18 @@ Zadania w tym repozytorium mają oswoić Was z używaniem Stream API. Jeżeli ni
 4. Klasa TasksMaps
     * Zaimplementuj metodę flattenPreserveDuplicates tak, aby zwracała wszystkie listy będące wartościami mapy jako jedną listę. Lista nie powinna usuwać duplikatów.
     * Zaimplementuj metodę flattenNoDuplicates tak, aby zwracała wszystkie listy będące wartościami mapy jako jedną listę. Lista powinna usunąć duplikaty.
-
+	
+Zadania z testów jednostkowch, które mają na celu utrwalenie sposobu, w jaki korzysta się z bibliotek jUnit oraz mockito.
+0. EmailValidatorTest, LongSumTest, PeselUtilityTest: Napisz kod w testowanych klasach, tak, aby testy zostały zaliczone.
+1. CalculatorTest
+    Napisz po 3 metody testujące poprawność kalkulatora. Klasa nie wymaga mockowania, a jedynie pisania prostych asercji.
+2. ProxyForNumberTest  
+    Zaimplementuj metodę testującą dla każdej z metod (getLong, getFloat, getDouble) w klasie ProxyForNumberProvider. Klasa odpytuje serwis NumberProvider o kolejny numer. Waszym zadaniem jest zmockowanie zwracanej wartości przez NumberProvider, oraz sprawdzenie, czy ta zmockowana wartość została zwrócona z service.
+3. CalculatorForProviderTest  
+    Klasa CalculatorForProvider wykorzystuje znane już metody kalkulatora oraz znany intergace dla pobierania wartości. Należy zmockować zwracane przez NumberProvider wartości i sprawdzić, czy CalculatorForProvider na nich wykonana operacje odejmowania, mnożenia, dzielenia oraz modulo.
+4. DatabaseInformationServiceTest  
+    Klasa używa sztucznego (zmockowanego)obiektu połączenie do bazy w celu symulowania jej logiki. Waszym zadaniem jest zaimplementowanie brakujących metod testujących, które będą sprawdzały interakcje z bazą. Wymagane jest mockowanie zwracanych przez bazę danych, oraz używanie konstrukcji verify do sprawdzenia, czy zostały wykonane prawidłowe metody na obiekcie bazy.
+5. Napisz testy jednostkowe do klasy UserValidator. Postaraj się przetestować jak najwięcej możliwych ścieżek.
+6. Napisz klasę UserRegistrationService bazując na testach w klasie UserRegistrationServiceTest.
+    Musisz utworzyć brakujące metody w odpowiednich klasach.  
+    **Nie możesz nic zmienić  w klasie UserRegistrationServiceTest!**
