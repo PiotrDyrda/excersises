@@ -18,7 +18,7 @@ public class EmailValidatorTest {
     public void shouldValidateEmailWithShortDomain() {
         String email = "abc@aa.aa";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertTrue(result);
     }
@@ -27,7 +27,7 @@ public class EmailValidatorTest {
     public void shouldValidateEmailWithSubDomain() {
         String email = "abc@aa.aaaa.a.aa.aa";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertTrue(result);
     }
@@ -36,7 +36,7 @@ public class EmailValidatorTest {
     public void shouldValidateEmailWithSpecialCharacters() {
         String email = "some.email-with_some+characters@aa.aaaa.a.aa.aa";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertTrue(result);
     }
@@ -45,7 +45,7 @@ public class EmailValidatorTest {
     public void shouldNotValidateEmailWithMultipleAtCharacters() {
         String email = "email@withAddtionalATcharacter@example.com";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertFalse(result);
     }
@@ -54,7 +54,7 @@ public class EmailValidatorTest {
     public void shouldNotValidateEmailWithToShortGlobalDomain() {
         String email = "sample@example.c";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertFalse(result);
     }
@@ -63,7 +63,7 @@ public class EmailValidatorTest {
     public void shouldValidateEmailWithNumbersWithIt() {
         String email = "sample123NumberedEmail@example123.com";
 
-        boolean result = emailValidator.isValid(email);
+        boolean result = emailValidator.validate(email);
 
         assertTrue(result);
     }
